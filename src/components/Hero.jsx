@@ -1,77 +1,154 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import ThemeToggle from "./ThemeToggle";
+import { Layout, Code2 } from "lucide-react";
+import FlipImage from "./FlipImage";
 
-const Hero = ({ setShowHero, setShowSections }) => {
-  const [flipped, setFlipped] = useState(false);
+const Hero = ({ isBackend, setShowSections }) => {
+  const [windowWidth, setWindowWidth] = useState(0);
+  
+  // Track screen size for responsive adjustments
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    
+    // Initial setup
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  
+  // Determine image size based on screen width
+  const getImageSize = () => {
+    if (windowWidth < 380) return "w-48 h-48";
+    if (windowWidth < 480) return "w-56 h-56";
+    if (windowWidth < 768) return "w-64 h-64";
+    return "w-72 h-72";
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { 
+      y: 0, 
+      opacity: 1,
+      transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
+    }
+  };
 
   return (
-    <section className="h-screen flex flex-col items-center justify-center px-6 md:px-12 lg:px-24 text-center transition-all duration-500">
-      {/* Light/Dark Mode Toggle */}
-      <div className="absolute top-5 right-5">
-        <ThemeToggle />
+    <section className="min-h-screen w-full pt-16 md:pt-20 flex flex-col justify-center px-3 sm:px-4 md:px-6 overflow-hidden">
+      {/* Background color based on mode */}
+      <div className="absolute inset-0 -z-10 transition-colors duration-500">
+        <div className={isBackend ? "bg-blue-900" : "bg-white"}></div>
       </div>
-
-      {/* Hero Title & Description */}
-      <motion.h1
-        className="text-4xl md:text-6xl font-bold mb-4"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-      >
-        Welcome to My Portfolio
-      </motion.h1>
-
-      <motion.p
-        className="text-lg md:text-2xl max-w-2xl"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
-      >
-        Crafting seamless web experiences.
-      </motion.p>
-
-      {/* Rotating Profile Image */}
-      <motion.div
-        className="relative mt-12 w-52 h-52 md:w-64 md:h-64 flex items-center justify-center cursor-pointer"
-        onClick={() => setFlipped(!flipped)}
-      >
-        {/* Outer Spinning Border */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-60 h-60 md:w-72 md:h-72 rounded-full border-[6px] border-transparent animate-[spin_8s_linear_infinite] border-t-blue-500 dark:border-t-gray-400"></div>
-        </div>
-
-        {/* Flipping Profile Image */}
-        <motion.div
-          className="relative w-52 h-52 md:w-64 md:h-64 rounded-full shadow-lg overflow-hidden bg-gray-300 dark:bg-gray-800"
-          initial={false}
-          animate={{ rotateY: flipped ? 180 : 0 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
+      
+      <div className="container mx-auto max-w-6xl">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
         >
-          <motion.img
-            key={flipped ? "profile" : "gif"}
-            src={flipped ? "/profile/profile1.png" : "https://media.giphy.com/media/gWVURnPa6iLLi/giphy.gif?cid=790b7611flqt9kz6sb3r7a1o7fs19hk15pndvml2ph1tt5m7&ep=v1_gifs_search&rid=giphy.gif&ct=g"}
-            alt="Profile"
-            className="w-full h-full object-cover rounded-full"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-          />
+          {/* Text Content - Stacks on mobile, left column on desktop */}
+          <div className="text-center md:text-left order-2 md:order-1 mt-6 md:mt-0">
+            {/* Developer Type Badge */}
+            <motion.div 
+              className="inline-flex items-center mb-2 sm:mb-4 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full border-2 transition-colors duration-300"
+              style={{ 
+                borderColor: isBackend ? '#38bdf8' : '#f97316',
+                backgroundColor: isBackend ? 'rgba(56, 189, 248, 0.1)' : 'rgba(249, 115, 22, 0.05)'
+              }}
+              variants={itemVariants}
+            >
+              {isBackend ? (
+                <>
+                  <Code2 size={windowWidth < 380 ? 12 : 16} className="mr-1.5 text-blue-400" />
+                  <span className={`text-blue-400 font-medium ${windowWidth < 380 ? 'text-xs' : 'text-sm'}`}>
+                    Backend Developer
+                  </span>
+                </>
+              ) : (
+                <>
+                  <Layout size={windowWidth < 380 ? 12 : 16} className="mr-1.5 text-orange-500" />
+                  <span className={`text-orange-500 font-medium ${windowWidth < 380 ? 'text-xs' : 'text-sm'}`}>
+                    Frontend Developer
+                  </span>
+                </>
+              )}
+            </motion.div>
+            
+            {/* Name */}
+            <motion.h1 
+              className={`text-3xl xs:text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-6 transition-colors duration-300 ${
+                isBackend ? "text-white" : "text-gray-800"
+              }`}
+              variants={itemVariants}
+            >
+              Dion Cedrick Marquez
+            </motion.h1>
+            
+            {/* Description */}
+            <motion.p 
+              className={`text-base sm:text-lg max-w-lg mx-auto md:mx-0 mb-5 sm:mb-8 transition-colors duration-300 ${
+                isBackend ? "text-blue-200" : "text-gray-600"
+              }`}
+              variants={itemVariants}
+            >
+              {isBackend 
+                ? "Building robust APIs and efficient database architectures with clean, maintainable code."
+                : "Crafting beautiful, responsive interfaces with a focus on user experience and modern design."}
+            </motion.p>
+            
+            {/* CTA Button */}
+            <motion.button
+              onClick={() => setShowSections(true)}
+              className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow-md text-white font-medium transition-all duration-300 ${
+                isBackend 
+                  ? "bg-blue-500 hover:bg-blue-600" 
+                  : "bg-orange-500 hover:bg-orange-600"
+              }`}
+              variants={itemVariants}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span className="flex items-center">
+                <span>View Portfolio</span>
+                <motion.span 
+                  className="ml-2"
+                  initial={{ x: 0 }}
+                  whileHover={{ x: 5 }}
+                >
+                  →
+                </motion.span>
+              </span>
+            </motion.button>
+          </div>
+          
+          {/* Profile Image with Flip - Stacks on mobile, right column on desktop */}
+          <motion.div 
+            className="flex justify-center order-1 md:order-2 mt-10 md:mt-0"
+            variants={itemVariants}
+          >
+            <FlipImage 
+              frontImage="/profile/profile1.png"
+              backImage="https://media.giphy.com/media/gWVURnPa6iLLi/giphy.gif"
+              isBackend={isBackend}
+              className={getImageSize()}
+            />
+          </motion.div>
         </motion.div>
-      </motion.div>
-
-      {/* Show More Button */}
-      <motion.button
-        className="mt-10 px-6 py-3 rounded-lg font-semibold shadow-lg transition duration-300 bg-black text-white dark:bg-white dark:text-black"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        onClick={() => {
-          setShowHero(false);
-          setShowSections(true); 
-        }}
-      >
-        Show More
-      </motion.button>
+      </div>
     </section>
   );
 };
