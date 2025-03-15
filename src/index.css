@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+/* Add extra small breakpoint to Tailwind */
+@layer utilities {
+  @variants responsive {
+    .text-xxs {
+      font-size: 0.65rem;
+      line-height: 1rem;
+    }
+  }
+}
+
+/* Base styles */
+html {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+  color: #111827;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Dark Mode (Backend) */
+html.dark {
+  background-color: #1e3a8a;
+  color: #f3f4f6;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f97316;
+  border-radius: 3px;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background-color: #3b82f6;
+}
+
+/* 3D transforms for image flip */
+.backface-hidden {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid #f97316;
+  outline-offset: 2px;
+}
+
+html.dark :focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Reset outline for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Responsive font sizing */
+@media screen and (max-width: 360px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Responsive image sizing for small screens */
+@media screen and (max-width: 340px) {
+  .img-xs {
+    max-width: 120px;
+    max-height: 120px;
+  }
+}
+
+/* Prevent text overflow */
+.text-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Fix for Safari backface-visibility */
+@supports (-webkit-touch-callout: none) {
+  .safari-fix {
+    transform: translateZ(0.1px);
+  }
+}
