@@ -1,147 +1,225 @@
 const blogposts = [
     {
       id: 1,
-      title: 'The Journey to Becoming a Software Engineer',
-      date: 'April 15, 2025',
+      title: 'Day 1: Stepping into Manila – History, Parks, and the Bay',
+      date: 'April 7, 2025',
       readTime: 5,
-      excerpt: 'Reflecting on my path from a curious student to a professional software engineer, and the lessons learned along the way.',
-      coverImage: '/assets/images/blog/blog1.jpg',
+      excerpt: 'We kicked off our educational trip with a day exploring the heart of Manila—from the historic walls of Intramuros to the iconic Rizal Park and the bustling Mall of Asia.',
+      coverImage: '/day1-coverpage.jpg',
       tags: ['Career', 'Personal'],
       content: [
         {
-          text: 'The journey to becoming a software engineer has been an exciting and challenging adventure. It all started during my high school years when I first discovered the power of programming. What began as simple curiosity has evolved into a lifelong passion for solving problems through code.'
+          text: 'Our journey began with excitement as we arrived in Manila. The city buzzed with energy, and we couldn’t wait to explore what it had to offer. After settling in, we immediately set out to begin our adventure.'
         },
         {
-          heading: 'Early Beginnings',
-          text: 'My first encounter with programming was in a computer class during high school. I still remember the thrill of seeing my first "Hello, World!" program run successfully. That small achievement sparked a curiosity that would eventually lead me down the path of software engineering.',
-          image: '/assets/images/blog/blog1-image1.jpg',
-          imageAlt: 'Computer classroom',
-          imageCaption: 'Where it all began - my high school computer lab'
+          heading: 'Intramuros: The Walled City',
+          text: 'Our first destination was Intramuros, a historic district that dates back to the Spanish colonial period. We visited landmarks like Fort Santiago and San Agustin Church, admired the Spanish-inspired architecture, and walked through cobblestone streets that whispered stories from the past. It was both educational and awe-inspiring to stand in a place so central to our national heritage.',
+          image: '/day1-blog1.jpg',
+          imageAlt: 'Fort Santiago in Intramuros',
+          imageCaption: 'Exploring Fort Santiago, a key piece of Philippine colonial history'
         },
         {
-          heading: 'University Years',
-          text: 'Pursuing a degree in Information Technology at Western Mindanao State University provided me with a solid foundation in computer science principles. The combination of theoretical knowledge and practical projects helped me develop a well-rounded skill set. I particularly enjoyed the collaborative nature of group projects, which taught me valuable lessons about teamwork and communication in software development.'
+          heading: 'Rizal Park: Honoring a National Hero',
+          text: 'Next, we visited Rizal Park (Luneta), one of the most significant historical sites in the Philippines. Here, we paid tribute to Dr. José Rizal at his monument and reflected on his sacrifice for the country. The wide open spaces and well-kept gardens made for a peaceful stop amid the bustling city.',
+          image: '/day1-blog2.jpg',
+          imageAlt: 'Rizal Monument in Luneta Park',
+          imageCaption: 'A moment of reflection at the Rizal Monument in Luneta Park'
         },
         {
-          heading: 'Learning Beyond the Classroom',
-          text: 'While formal education was important, much of my growth came from self-directed learning and personal projects. I spent countless hours exploring online resources, participating in coding challenges, and building personal projects to apply and reinforce what I was learning. This continuous practice was instrumental in developing my problem-solving abilities and technical skills.',
-          image: '/assets/images/blog/blog1-image2.jpg',
-          imageAlt: 'Coding at night',
-          imageCaption: 'Late night coding sessions became a regular part of my routine'
+          heading: 'Mall of Asia: City Lights and Coastal Views',
+          text: 'We wrapped up the day at the Mall of Asia (MOA), one of the largest malls in Asia. Aside from shopping and food trips, we enjoyed the scenic view of Manila Bay from the seaside area. It was a fun and relaxing way to end our first day.',
+          image: '/day1-done.jpg',
+          imageAlt: 'Mirror shot on Mall of Asia ',
+          imageCaption: 'Sunset views at MOA—relaxing by the bay after a full day of exploring'
         },
         {
-          heading: 'First Professional Experience',
-          text: 'Landing my first role as a Technology Support specialist was a significant milestone. While not directly a development role, it provided valuable insights into the IT industry and helped me understand the importance of user experience in technology. This experience reinforced my desire to create software solutions that genuinely solve problems for users.'
-        },
-        {
-          heading: 'Looking Ahead',
-          text: 'As I continue to grow in my career, I remain committed to lifelong learning and improvement. The technology landscape is constantly evolving, and staying current requires dedication and adaptability. My goal is to continue expanding my skill set while applying my knowledge to create meaningful and impactful software solutions.'
-        },
-        {
-          text: 'The journey to becoming a software engineer is not a destination but a continuous path of growth and learning. I\'m excited to see where this path takes me next and the challenges and opportunities that lie ahead.'
+          text: 'Day 1 set the tone for the rest of our trip—blending history, culture, and leisure. It reminded us that learning doesn’t always happen in classrooms; sometimes, it’s found in the streets, stories, and landmarks of the places we visit.',
+          image: '/day1-blog3.jpg',
+          imageAlt: 'Sunset in Manila Bay',
+          imageCaption: 'Such a beautiful experience to witness the sunset on Manila Bay'
         }
       ]
     },
     {
       id: 2,
-      title: 'Building Responsive Web Applications with Tailwind CSS',
-      date: 'March 28, 2025',
-      readTime: 8,
-      excerpt: 'A comprehensive guide to using Tailwind CSS for creating beautiful, responsive web applications with minimal custom CSS.',
-      coverImage: '/assets/images/blog/blog2.jpg',
-      tags: ['Web Development', 'CSS', 'Tutorial'],
+      title: 'Day 2: Inside Subic Bay Port – Trade, Technology, and Art',
+      date: 'April 8, 2025',
+      readTime: 4,
+      excerpt: 'Our second day took us to Subic Bay Port, where we explored the port’s role in international trade, saw high-tech security systems in action, and found creativity inside the convention center.',
+      coverImage: '/day2-coverpage.jpg',
+      tags: ['Subic', 'Logistics', 'Port Operations', 'Art'],
       content: [
         {
-          text: 'Tailwind CSS has revolutionized the way developers approach styling web applications. In this post, I\'ll share my experience using Tailwind CSS for front-end development and provide some practical tips for leveraging its utility-first approach to build beautiful, responsive interfaces.'
+          heading: 'Subic Bay Port Admission Building',
+          text: 'Our day began at the Port Admission Building of Subic Bay, where we were introduced to the port’s key role in facilitating international trade. The staff gave us an insightful orientation on how imports and exports are processed, how international ships are docked and handled, and how logistics are managed across the region.',
+          image: '/day2-blog4.jpg',
+          imageAlt: 'Subic Bay Port building exterior',
+          imageCaption: 'At the Port Admission Building – learning how global trade flows through Subic'
         },
         {
-          heading: 'Why Tailwind CSS?',
-          text: 'Before diving into Tailwind, I spent years writing custom CSS and using various CSS frameworks. Tailwind\'s utility-first approach initially seemed counterintuitive, but once I embraced its workflow, I discovered how it dramatically improved my development efficiency. The ability to style elements directly in the markup eliminated the constant switching between HTML and CSS files, resulting in faster development cycles.',
-          image: '/assets/images/blog/blog2-image1.jpg',
-          imageAlt: 'Tailwind CSS code example',
-          imageCaption: 'Example of Tailwind utility classes in action'
+          heading: 'Port Police and CCTV Command Center',
+          text: 'We then visited the port’s police station, where we were shown their high-functioning surveillance system. The staff demonstrated how their CCTV technology helps maintain port safety and efficiently monitor movements within the area. It was impressive to see real-time monitoring with such accuracy and scale.',
+          image: '/day2-blog3.jpg',
+          imageAlt: 'CCTV monitoring screens inside the police station',
+          imageCaption: 'A look inside the command center – real-time monitoring at Subic Port'
         },
         {
-          heading: 'Getting Started with Tailwind',
-          text: 'Setting up Tailwind in a project is straightforward. Whether you\'re using a build tool like Vite or a simple HTML page, Tailwind can be integrated with minimal configuration. The documentation is excellent, providing clear instructions for various project setups. Once installed, you can immediately start using Tailwind\'s utility classes to style your elements.'
+          heading: 'Subic Convention Center: Art Amid Industry',
+          text: 'To end the day, we visited the Subic Convention Center. Surprisingly, it featured a beautiful exhibit of local and cultural artworks inside—a refreshing contrast to the industrial atmosphere of the port. It reminded us that even in places of commerce and trade, there’s room to celebrate creativity and culture.',
+          image: '/day2-blog2.jpg',
+          imageAlt: 'Art exhibit inside Subic Convention Center',
+          imageCaption: 'A quiet space for art and culture in the heart of an industrial hub'
         },
         {
-          heading: 'Responsive Design Made Easy',
-          text: 'One of Tailwind\'s strongest features is its approach to responsive design. Using breakpoint prefixes (sm:, md:, lg:, xl:), you can specify how elements should behave at different screen sizes. This makes creating responsive layouts intuitive and eliminates the need for complex media query management in separate CSS files.',
-          image: '/assets/images/blog/blog2-image2.jpg',
-          imageAlt: 'Responsive design example',
-          imageCaption: 'A responsive layout built with Tailwind breakpoint utilities'
-        },
-        {
-          heading: 'Customization and Theming',
-          text: 'While Tailwind provides an extensive set of default utilities, every project has unique requirements. Tailwind\'s configuration system allows for customization of colors, spacing, breakpoints, and more. This flexibility ensures that you can maintain a consistent design system while tailoring the framework to your project\'s specific needs.'
-        },
-        {
-          heading: 'Performance Considerations',
-          text: 'A common concern with utility-first CSS is the potential for large file sizes. Tailwind addresses this with its purge functionality, which removes unused CSS in production builds. With proper configuration, your production CSS can be remarkably small, containing only the utilities actually used in your project.'
-        },
-        {
-          heading: 'Best Practices',
-          text: 'After working with Tailwind on multiple projects, I\'ve developed some best practices: Use component extraction for repeated patterns, leverage Tailwind\'s plugin system for custom utilities, and maintain a consistent order of utility classes for better readability. These practices have helped keep my code organized and maintainable, even on larger projects.'
-        },
-        {
-          heading: 'Conclusion',
-          text: 'Tailwind CSS has significantly improved my front-end development workflow. Its utility-first approach, combined with robust responsive design features and customization options, makes it a powerful tool for modern web development. If you haven\'t tried Tailwind yet, I highly recommend giving it a chance on your next project.'
+          text: 'Day 2 gave us a behind-the-scenes look at how ports function—not just in terms of ships and cargo, but also safety, systems, and even art. It showed us the bigger picture of how critical infrastructure runs in the background of global commerce.'
         }
       ]
     },
     {
       id: 3,
-      title: 'Mastering React Hooks: Beyond the Basics',
-      date: 'February 10, 2025',
-      readTime: 10,
-      excerpt: 'Exploring advanced React hook patterns and custom hooks to write cleaner, more maintainable React code.',
-      coverImage: '/assets/images/blog/blog3.jpg',
-      tags: ['React', 'JavaScript', 'Frontend'],
+      title: 'Day 3: Museums and Memories – Nature, History, and Heritage',
+      date: 'April 9, 2025',
+      readTime: 3,
+      excerpt: 'From exploring the wonders of biodiversity to reliving historical milestones, Day 3 immersed us in the rich heritage and culture of the Philippines.',
+      coverImage: '/day3-coverpage.jpg',
+      tags: ['Museum', 'Culture', 'History'],
       content: [
         {
-          text: 'React Hooks have transformed how we write React components, enabling function components to use state and other React features without classes. While most developers are familiar with basic hooks like useState and useEffect, there\'s a world of advanced patterns and custom hooks that can take your React code to the next level.'
+          heading: 'National Museum of Natural History',
+          text: 'Our first stop was the National Museum of Natural History in Manila. It showcased the biodiversity of the Philippines—from unique wildlife to geological formations. The Tree of Life structure in the center was both architecturally stunning and symbolically powerful.',
+          image: '/day3-blog1.jpg',
+          imageAlt: 'Tree of Life at the museum',
+          imageCaption: 'Inside the National Museum – discovering the Philippines’ natural heritage'
         },
         {
-          heading: 'A Quick Refresher on Basic Hooks',
-          text: 'Before diving into advanced patterns, let\'s briefly review the fundamental hooks. useState manages local component state, useEffect handles side effects, useContext accesses context values, and useReducer provides a more structured approach to state management. These hooks form the foundation for more complex patterns.'
+          heading: 'Quezon Memorial Shrine',
+          text: 'Next, we visited the Quezon Memorial Shrine, where we learned about the life and legacy of former President Manuel L. Quezon. His leadership during a pivotal era in Philippine history left a lasting impression on us.',
+          image: '/day3-blog2.jpg',
+          imageAlt: 'Quezon Memorial Shrine',
+          imageCaption: 'Standing beneath the towering monument honoring President Quezon'
         },
         {
-          heading: 'Custom Hooks for Reusable Logic',
-          text: 'One of the most powerful aspects of React Hooks is the ability to extract component logic into reusable custom hooks. I\'ve found that identifying repeated patterns across components and refactoring them into custom hooks significantly improves code maintainability and reduces duplication.',
-          image: '/assets/images/blog/blog3-image1.jpg',
-          imageAlt: 'Custom hook code example',
-          imageCaption: 'A custom hook for handling form state'
+          heading: 'Presidential Car Museum',
+          text: 'To end the day, we toured the Presidential Car Museum, which displayed official vehicles used by Philippine presidents over the decades. It offered a unique and personal view into the country’s political past.',
+          image: '/day3-blog3.jpg',
+          imageAlt: 'Vintage presidential car',
+          imageCaption: 'History on wheels – exploring decades of presidential cars'
+        }
+      ]
+    },
+    {
+      id: 4,
+      title: 'Day 4: Technology and Economy – A Look Inside Hytec and BSP',
+      date: 'April 10, 2025',
+      readTime: 3,
+      excerpt: 'We explored the tech industry at Hytec and got a rare glimpse into the central banking system at Bangko Sentral ng Pilipinas.',
+      coverImage: '/day4-coverpage.jpg',
+      tags: ['Technology', 'Economy', 'Finance'],
+      content: [
+        {
+          heading: 'Hytec Power Inc.',
+          text: 'Our visit to Hytec Power Inc. gave us insight into industrial technology and automation. We observed how the company contributes to technical education and equipment manufacturing in the Philippines.',
+          image: '/day4-blog1.jpg',
+          imageAlt: 'Hytec facility tour',
+          imageCaption: 'Learning about automation and engineering at Hytec'
         },
         {
-          heading: 'useCallback and useMemo for Performance',
-          text: 'Performance optimization is a common concern in React applications. useCallback and useMemo help prevent unnecessary renders by memoizing functions and computed values. Understanding when to use these hooks can make a significant difference in application performance, especially in components that render frequently or handle complex calculations.'
+          image: '/day4-blog2.jpg',
         },
         {
-          heading: 'Advanced useEffect Patterns',
-          text: 'The useEffect hook is versatile but can be tricky to use correctly. Ive learned several advanced patterns, such as using cleanup functions effectively, managing async operations, and handling dependencies properly. These patterns help avoid common pitfalls like memory leaks, race conditions, and infinite render loops.',
-          image: '/assets/images/blog/blog3-image2.jpg',
-          imageAlt: 'Complex useEffect example',
-          imageCaption: 'Managing async operations with useEffect'
+          image: '/day4-blog3.jpg',
+        }
+
+      ]
+    },
+    {
+      id: 5,
+      title: 'Day 5: Systems in Motion – MMDA and LRT Line 2',
+      date: 'April 11, 2025',
+      readTime: 4,
+      excerpt: 'We gained firsthand insight into traffic monitoring at MMDA and explored the systems behind Metro Manila’s light rail operations.',
+      coverImage: '/photo_2025-05-05_16-07-34.jpg',
+      tags: ['Transport', 'Infrastructure', 'Technology'],
+      content: [
+        {
+          heading: 'MMDA Command Center, Pasig',
+          text: 'At the MMDA office in Pasig, we were shown the live operations of their CCTV control center. It was fascinating to see how they monitor traffic and respond to emergencies in real time.',
+          image: '/photo_2025-05-05_16-07-32.jpg',
+          imageAlt: 'MMDA CCTV room',
+          imageCaption: 'A live view of how Metro Manila traffic is managed 24/7'
         },
         {
-          heading: 'Combining Multiple Hooks',
-          text: 'Real-world React components often require combining multiple hooks to achieve the desired functionality. Understanding how hooks interact and the order in which they execute is crucial for building complex components. I\'ve found that visualizing the hook dependency chain helps reason about component behavior.'
+          heading: 'LRT Line 2 Operations',
+          text: 'Later, we toured the LRT Line 2 facility. Aside from riding the train, we visited the maintenance area where trains are repaired and maintained. It was a behind-the-scenes look at how Metro Manila’s transit system operates.',
+          image: '/photo_2025-05-05_16-07-35.jpg',
+          imageAlt: 'Train maintenance facility',
+          imageCaption: 'Where the trains sleep – maintenance in motion at LRT Line 2'
         },
         {
-          heading: 'State Management Beyond useState',
-          text: 'While useState is sufficient for simple components, complex applications often require more sophisticated state management. useReducer provides a Redux-like approach to state management within components. For application-wide state, combining useContext with useReducer creates a lightweight state management solution that can replace external libraries in many cases.'
+          heading: 'LRT Line 2 Operations',
+          text: 'Later, we toured the LRT Line 2 facility. Aside from riding the train, we visited the maintenance area where trains are repaired and maintained. It was a behind-the-scenes look at how Metro Manila’s transit system operates.',
+          image: '/photo_2025-05-05_16-07-45.jpg',
+          imageAlt: 'Train maintenance facility',
+        }
+
+      ]
+    },
+    {
+      id: 6,
+      title: 'Day 6: Road to Baguio – Strawberries, Bells, and Cadets',
+      date: 'April 12, 2025',
+      readTime: 3,
+      excerpt: 'We made our way to Baguio, stopping at La Trinidad’s strawberry farms, the Chinese Bell Tower, and the historic Philippine Military Academy.',
+      coverImage: 'day6.jpg',
+      tags: ['Baguio', 'Culture', 'Nature'],
+      content: [
+        {
+          heading: 'La Trinidad Strawberry Farm',
+          text: 'Our first stop in the highlands was the La Trinidad Strawberry Farm. We enjoyed the cool breeze and got to see how strawberries are grown and harvested—a local pride of Benguet.',
+          image: '/day6 photo_2025-05-05_16-11-15.jpg',
+          imageAlt: 'Rows of strawberries in La Trinidad',
+          imageCaption: 'Fresh from the farm – La Trinidad’s sweet pride'
         },
         {
-          heading: 'Testing Components with Hooks',
-          text: 'Testing components that use hooks presents unique challenges. I\'ve developed strategies for effectively testing hook behavior, including using React Testing Library\'s act function, mocking hook dependencies, and testing custom hooks in isolation. These approaches ensure that components behave as expected across different scenarios.'
+          heading: 'Chinese Bell Tower',
+          text: 'Next, we visited the Chinese Bell Tower in Baguio. The location offered a quiet moment for reflection and a beautiful view of the city’s skyline.',
+          image: '/day6 photo_2025-05-05_16-11-22.jpg',
+          imageAlt: 'Chinese Bell in Baguio',
+          imageCaption: 'Harmony and history at Baguio’s Chinese Bell Tower'
         },
         {
-          heading: 'Conclusion',
-          text: 'Mastering React Hooks goes beyond knowing the API. It involves understanding patterns, combinations, and best practices that lead to clean, maintainable code. As you continue working with hooks, experiment with advanced patterns and develop your own custom hooks to solve specific problems in your applications.'
+          heading: 'Philippine Military Academy (PMA)',
+          text: 'We ended the day at the Philippine Military Academy, where we learned about the life of cadets and saw impressive displays of discipline and military tradition.',
+          image: '/day6-pma.jpg',
+          imageAlt: 'PMA entrance or parade ground',
+          imageCaption: 'Where leaders are forged – visiting the PMA grounds'
+        }
+      ]
+    },
+    {
+      id: 7,
+      title: 'Day 7: Leisure in the Highlands – Burnham Park Adventures',
+      date: 'April 13, 2025',
+      readTime: 2,
+      excerpt: 'Our final day in Baguio gave us time to relax, explore, and enjoy the beauty and charm of Burnham Park.',
+      coverImage: '/day7-coverpage.jpg',
+      tags: ['Baguio', 'Leisure', 'Parks'],
+      content: [
+        {
+          heading: 'Burnham Park Activities',
+          text: 'With no official schedule, we spent the day at Burnham Park. We went boating on the lake, rode bikes, and enjoyed street food around the park. It was the perfect way to unwind and reflect on an amazing week.',
+          image: '/day7-blog1.jpg',
+          imageAlt: 'Enjoying our free day',
+          imageCaption: 'Relaxing by the lake – free time well spent at Burnham Park'
+        },
+        {
+          image: '/day7.jpg',
+          text: 'This final day reminded us that balance is essential—even on educational trips. Sometimes the best lessons come when we slow down and simply enjoy the moment.'
         }
       ]
     }
+                    
+    
   ];
   
   export default blogposts;
